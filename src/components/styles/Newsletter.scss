@@ -1,0 +1,29 @@
+@import '../../styles/Variables.scss';
+
+.component-newsletter {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: $footer-background;
+    padding: 12rem 2rem 2rem;
+    margin-top: 9rem;
+    position: relative;
+
+    .newslatter--img {
+        width: 200px;
+        position: absolute;
+        top: -50px;
+    }
+
+    .newslatter--article {
+        margin: 2rem 0;
+    }
+
+    .newslatter--form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+}

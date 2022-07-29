@@ -1,0 +1,92 @@
+@import '../../styles/Variables.scss';
+
+.component-footer {
+    width: 100%;
+    min-height: 12vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $base-dark;
+    padding: 2rem;
+
+    .footer--firstSection {
+        @extend %center;
+        flex-direction: column;
+
+        .footer-text {
+            padding-right: 10vw;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: dashed 2px rgb(100 174 193 / 90%);
+
+            .footer-text-color-2 {
+                color: $text-secondary;
+            }
+        }
+
+        .footer-languages {
+            width: 100%;
+            padding: 1rem 0;
+            padding-right: 24vw;
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 2rem;
+                justify-content: start;
+            }
+        }
+
+        .footer-download-app{
+            display: flex;
+            padding: 2rem;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 1rem;
+            .appStore, platStore {
+                width: "140px";
+            }
+        }
+
+        .footer-externalLink {
+            width: 100%;
+            padding: 1rem 0;
+            @extend %center;
+            flex-direction: column;
+            gap: 1rem;
+
+            h5 {
+                border-bottom: dashed 2px rgb(100 174 193 / 90%);
+                width: 100%;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            ul {
+                display: flex;
+                flex-flow: row wrap;
+                gap: 3rem;
+                align-items: center;
+            }
+        }
+
+        .footer-services {
+            width: 100%
+        }
+
+        .footer-generalInformation{
+            width: 100%;
+        }
+        .footer-certification{
+            width: 100%;
+            display: flex;
+            gap : 2rem;
+        }
+        .footer-legalInformation{
+            width: 100%;
+            text-align: center;
+            li{
+                line-height: 2.4rem;
+            }
+        }
+    }
+}

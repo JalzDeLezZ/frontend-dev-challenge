@@ -1,0 +1,82 @@
+@import '../../styles/Variables.scss';
+
+
+
+.component-Firstview {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    .containerControls {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 0 4vw;
+        position: absolute;
+
+        button {
+            border: none;
+            background: #ffffff6e;
+            border-radius: 50%;
+            font-size: 2rem;
+            width: 4rem;
+            height: 4rem;
+            font-family: cursive;
+        }
+    }
+
+    .firstview-main {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+
+        .box--figure {
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            img {
+                min-width: 100%;
+                min-height: 100%;
+                transition: 1s;
+                opacity: 0;
+                
+                &.loaded {
+                    opacity: 1;
+                }
+            }
+
+            .paragraph {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                max-width: 40rem;
+
+                color: #fff;
+                text-shadow: 0px 0px 6px #000;
+                margin: 6rem;
+
+                h1,
+                h2 {
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+    }
+}

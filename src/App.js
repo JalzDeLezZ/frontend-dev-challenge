@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment, useContext } from "react";
+import { Modal } from "./components/Modal";
+import { AllContext } from "./context/store";
+import Home from "./pages/Home";
+import { Portal } from "./Portal";
 
 function App() {
+
+  const {
+    statements: { s_modal },
+  } = useContext(AllContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      {s_modal && <Portal><Modal/></Portal>}
+      <Home/>
+    </Fragment>
   );
 }
 
