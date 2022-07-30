@@ -6,33 +6,72 @@ const Questions = () => {
   const [question, setQuestion] = useState("");
 
   const iAsk = useRef(null);
-/* 
+
+  
   useEffect(() => {
-    // add className to the element to match the category name
-    console.log(iAsk.current, "AAAAAAAAAAAAAAAAAAAAAAAAAAX");
-    // iAsk.current.classList.add(category);
-    // iAsk.current.childNodes.forEach((element) => {
-    //   element.classList.add(category);
-    // });
-    //if the element dataset.category is equal to the category name, add className to the element
-    // if (iAsk.current.dataset.category === category) {
-    //   iAsk.current.classList.add(category);
-    // } else {
-    //   iAsk.current.classList.remove(category);
-    // }
-    // console.log(iAsk.current.childNodes[0].classList.remove('activo'), "ccccccccccccc");
-    iAsk.current.childNodes.forEach((element) => {
-      console.log("object", element);
-      if (element.dataset.categoria === category) {
-        console.log("match ----------------", element);
-        element.classList.add('activo');
-      } else {
-        element.classList.remove('activo');
-      }
-      console.log(element.dataset.categoria);
-      console.log(category);
+    console.log("useEffect");
+    // const fetchData = async () => {
+    //   const response = await fetch(
+    //     `https://opentdb.com/api.php?amount=1&category=${category}&difficulty=easy&type=multiple`
+    //   );
+    //   const data = await response.json();
+    //   setQuestion(data.results[0].question);
+    // };
+    // fetchData();
+
+    // const aQuestions = iAsk.current.getElementsByClassName("contenedor-preguntas");
+
+    // console.log(aQuestions);
+
+    //get questions from className "contenedor-preguntas"
+
+    const aQuestions = document.getElementsByClassName("contenedor-preguntas");
+
+    // if the element of aQuestions .dataset.category is equal to the category selected
+    // then show the question
+    console.log('ciro', aQuestions);
+
+    //remove the class active from all the questions
+    aQuestions.forEach(element => {
+      element.classList.remove("active");
     })
-  }, [category]); */
+
+    for (let i = 0; i < aQuestions.length; i++) {
+      console.log("first");
+      if (aQuestions[i].dataset.category === category) {
+        //add class active to the question
+        console.log(aQuestions[i], "LOREMMMMMMMMMMM");
+        aQuestions[i].classList.add("activo");
+        // aQuestions[i].style.display = "block";
+      } else {
+        // aQuestions[i].style.display = "none";
+        //remove class active to the question
+        aQuestions[i].classList.remove("activo");
+      }
+    } 
+
+
+    // aQuestions.forEach((question) => {
+    //   if (question.classList.contains("active")) {
+    //     question.classList.remove("active");
+    //   } else {
+    //     question.classList.add("active");
+    //   }
+    // })
+
+    // for (let i = 0; i < aQuestions.length; i++) {
+    //   aQuestions[i].addEventListener("click", function () {
+    //     this.classList.toggle("active");
+    //     const panel = this.nextElementSibling;
+    //     if (panel.style.maxHeight) {
+    //       panel.style.maxHeight = null;
+    //     } else {
+    //       panel.style.maxHeight = panel.scrollHeight + "px";
+    //     }
+    //   });
+    // }
+  }, [category]);
+
 
   return (
     <section className="component-question">
@@ -241,28 +280,6 @@ const Categories = ({ category, setCategory }) => {
     console.log("----------------------");
 
     console.log(iCategory.current, "###############");
-
-    console.log("==========================================================");
-
-    // get all tags with class "contenedor-preguntas"
-
-    const contenedorPreguntas = document.querySelectorAll(
-      ".contenedor-preguntas"
-    );
-
-    console.log(contenedorPreguntas, "###############");
-
-    // clean the class active from the other categories
-    contenedorPreguntas.forEach((item) => {
-      // item.classList.remove("activo");
-      if (item.dataset.categoria === e.currentTarget.dataset.categoria) {
-        item.classList.add("activo");
-      } else {
-        item.classList.remove("activo");
-      }
-    })
-
-
   };
 
   console.log(category, "SSSSSSSSSSS");
