@@ -4,17 +4,35 @@
 
 .component-Firstview {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     place-items: center;
+
+    .firstview--background{
+        overflow: hidden;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        .main--mask {
+            position: absolute;
+            top: 0;
+            left: -19%;
+            width: 146%;
+            height: 100vh;
+            z-index: 1;
+            user-select: none;
+            mix-blend-mode: screen;
+        }
+    }
 
     .containerControls {
         width: 100%;
         display: flex;
         justify-content: space-between;
         box-sizing: border-box;
-        padding: 0 4vw;
+        padding: 0 1vw;
         position: absolute;
+        z-index: 2;
 
         button {
             border: none;
@@ -38,15 +56,15 @@
             place-items: center;
             overflow: hidden;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             position: relative;
 
-            img {
+            .img--carousel {
                 min-width: 100%;
                 min-height: 100%;
                 transition: 1s;
                 opacity: 0;
-                
+
                 &.loaded {
                     opacity: 1;
                 }
@@ -63,7 +81,7 @@
                 max-width: 40rem;
 
                 color: #fff;
-                text-shadow: 0px 0px 1.4px #000;
+                text-shadow: 0px 0px 19.4px #000;
                 margin: 6rem;
 
                 h1,

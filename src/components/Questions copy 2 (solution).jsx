@@ -334,3 +334,7 @@ const Categories = ({ category, setCategory }) => {
 };
 
 export default Questions;
+
+
+// Página de Preguntas Frecuentes con Filtros | HTML, CSS y Javascript
+// https://youtu.be/HOezqHXVVxA

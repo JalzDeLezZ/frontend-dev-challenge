@@ -43,12 +43,19 @@ const Fisrtview = () => {
 
   return (
     <section className="component-Firstview">
+      <figure className="firstview--background">
+        <img
+          src={require("../assets/images/mask.jpg")}
+          alt="Mask"
+          className="main--mask"
+        />
+      </figure>
       <div className="firstview-main">
         <figure className="box--figure">
           <img
             src={require(`../assets/images/carousel/${selectedImage}`)}
             alt="call-center"
-            className={loaded ? "loaded" : ""}
+            className={`img--carousel ${loaded && "loaded"}`}
             onLoad={() => setLoaded(true)}
           />
           <article className="paragraph">
