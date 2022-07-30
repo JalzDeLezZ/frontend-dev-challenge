@@ -3,14 +3,7 @@ import "./styles/Questions.scss";
 const Questions = () => {
   const [category, setCategory] = useState("");
 
-  // const [question, setQuestion] = useState("");
-
-  const iAsk = useRef(null);
-
   useEffect(() => {
-    // iAsk.current.addEventListener("click", handleClick);
-    // const aQuestions = iAsk.current.childNodes;
-
     const questions = document.querySelectorAll(
       ".preguntas .contenedor-pregunta"
     );
@@ -36,25 +29,20 @@ const Questions = () => {
         });
       });
     });
-    // console.log(iAsk.current.childNodes, "SXXXXXX");
   }, []);
-
-  const mClickAsk = (e) => {
-    // console.log("click", e.currentTarget);
-  };
 
   return (
     <section className="component-question">
       <h1 className="tittle">Preguntas Frecuentes</h1>
       <Categories category={category} setCategory={setCategory} />
 
-      <section className="preguntas" ref={iAsk}>
+      <section className="preguntas">
         {/* Preguntas Metodos de pago */}
         <article
           className="contenedor-preguntas activo"
           data-categoria="metodos-pago"
         >
-          <div className="contenedor-pregunta" onClick={mClickAsk}>
+          <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Que metodos de pago disponibles tienen?{" "}
               <img
@@ -65,13 +53,12 @@ const Questions = () => {
             <p className="respuesta">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem
               ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
-              laborum porro voluptates, sequi aliquam mollitia! Nostrum eius
-              iure sapiente, voluptates soluta adipisci, perferendis
-              voluptatibus eligendi vel saepe harum. Consectetur,
-              doloribus.adipisicing elit.
+              ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+              ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+              laborum.
             </p>
           </div>
-          <div className="contenedor-pregunta" onClick={mClickAsk}>
+          <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Tienen plazo de pago?{" "}
               <img
@@ -82,18 +69,13 @@ const Questions = () => {
             <p className="respuesta">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Voluptatum laborum porro voluptates, sequi aliquam mollitia!
-              Nostrum eius iure sapiente, voluptates soluta adipisci,
-              perferendis voluptatibus eligendi vel saepe harum. Consectetur,
-              doloribus.adipisicing elit. Voluptatum laborum porro voluptates,
-              sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
-              soluta adipisci, perferendis voluptatibus eligendi vel saepe
-              harum. Consectetur, doloribus.
+              Nostrum eius iure sapiente, voluptates.
             </p>
           </div>
         </article>
         {/* Preguntas Entregas */}
         <article className="contenedor-preguntas" data-categoria="entregas">
-          <div className="contenedor-pregunta" onClick={mClickAsk}>
+          <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿En que ciudades están disponibles las citas de consultoría?{" "}
               <img
@@ -105,17 +87,10 @@ const Questions = () => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Voluptatum laborum porro voluptates, sequi aliquam mollitia!
               Nostrum eius iure sapiente, voluptates soluta adipisci,
-              perferendis voluptatibus eligendi vel saepe harum. Consectetur,
-              doloribus.adipisicing elit. Voluptatum laborum porro voluptates,
-              sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
-              soluta adipisci, perferendis voluptatibus eligendi vel saepe
-              harum. Consectetur, doloribus.adipisicing elit. Voluptatum laborum
-              porro voluptates, sequi aliquam mollitia! Nostrum eius iure
-              sapiente, voluptates soluta adipisci, perferendis voluptatibus
-              eligendi vel saepe harum. Consectetur, doloribus.
+              perferendis.
             </p>
           </div>
-          <div className="contenedor-pregunta" onClick={mClickAsk}>
+          <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Están abalados por la OMS?{" "}
               <img
@@ -125,19 +100,13 @@ const Questions = () => {
             </h5>
             <p className="respuesta">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Voluptatum laborum porro voluptates, sequi aliquam mollitia!
-              Nostrum eius iure sapiente, voluptates soluta adipisci,
-              perferendis voluptatibus eligendi vel saepe harum. Consectetur,
-              doloribus.adipisicing elit. Voluptatum laborum porro voluptates,
-              sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
-              soluta adipisci, perferendis voluptatibus eligendi vel saepe
-              harum. Consectetur, doloribus.
+              Voluptatum laborum parom.
             </p>
           </div>
         </article>
         {/* Preguntas Seguridad */}
         <article className="contenedor-preguntas" data-categoria="seguridad">
-          <div className="contenedor-pregunta" onClick={mClickAsk}>
+          <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Como puedo saber si son confiables?{" "}
               <img
@@ -148,18 +117,10 @@ const Questions = () => {
             <p className="respuesta">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Voluptatum laborum porro voluptates, sequi aliquam mollitia!
-              Nostrum eius iure sapiente, voluptates soluta adipisci,
-              perferendis voluptatibus eligendi vel saepe harum. Consectetur,
-              doloribus.adipisicing elit. Voluptatum laborum porro voluptates,
-              sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
-              soluta adipisci, perferendis voluptatibus eligendi vel saepe
-              harum. Consectetur, doloribus.adipisicing elit. Voluptatum laborum
-              porro voluptates, sequi aliquam mollitia! Nostrum eius iure
-              sapiente, voluptates soluta adipisci, perferendis voluptatibus
-              eligendi vel saepe harum. Consectetur, doloribus.
+              Nostrum eius iure sapiente.
             </p>
           </div>
-          <div className="contenedor-pregunta" onClick={mClickAsk}>
+          <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Que pasa con mis datos personales?{" "}
               <img
@@ -170,18 +131,13 @@ const Questions = () => {
             <p className="respuesta">
               Lorem ipsum, dolor sit amet consectetur adipisicing
               elit.Voluptatum laborum porro voluptates, sequi aliquam
-              mollitia!Nostrum eius iure sapiente, voluptates soluta
-              adipisci,perferendis voluptatibus eligendi vel saepe harum.
-              Consectetur,doloribus.adipisicing elit. Voluptatum laborum porro
-              voluptates,sequi aliquam mollitia! Nostrum eius iure sapiente,
-              voluptatessoluta adipisci, perferendis voluptatibus eligendi vel
-              saepeharum. Consectetur, doloribus.
+              mollitia!Nostrum eius iure sapiente, voluptates soluta.
             </p>
           </div>
         </article>
         {/* Preguntas Cuenta */}
         <article className="contenedor-preguntas" data-categoria="cuenta">
-          <div className="contenedor-pregunta" onClick={mClickAsk}>
+          <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Como puedo acceder a mis pedidos?{" "}
               <img
@@ -194,16 +150,10 @@ const Questions = () => {
               Voluptatum laborum porro voluptates, sequi aliquam mollitia!
               Nostrum eius iure sapiente, voluptates soluta adipisci,
               perferendis voluptatibus eligendi vel saepe harum. Consectetur,
-              doloribus.adipisicing elit. Voluptatum laborum porro voluptates,
-              sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
-              soluta adipisci, perferendis voluptatibus eligendi vel saepe
-              harum. Consectetur, doloribus.adipisicing elit. Voluptatum laborum
-              porro voluptates, sequi aliquam mollitia! Nostrum eius iure
-              sapiente, voluptates soluta adipisci, perferendis voluptatibus
-              eligendi vel saepe harum. Consectetur, doloribus.
+              doloribus.adipisicing elit.
             </p>
           </div>
-          <div className="contenedor-pregunta" onClick={mClickAsk}>
+          <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Como puedo cambiar mi contraseña?{" "}
               <img
@@ -216,10 +166,7 @@ const Questions = () => {
               Voluptatum laborum porro voluptates, sequi aliquam mollitia!
               Nostrum eius iure sapiente, voluptates soluta adipisci,
               perferendis voluptatibus eligendi vel saepe harum. Consectetur,
-              doloribus.adipisicing elit. Voluptatum laborum porro voluptates,
-              sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates
-              soluta adipisci, perferendis voluptatibus eligendi vel saepe
-              harum. Consectetur, doloribus.
+              doloribus.adipisicing elit.
             </p>
           </div>
         </article>

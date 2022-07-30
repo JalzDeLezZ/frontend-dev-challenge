@@ -2,13 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./styles/Firstview.scss";
 const Fisrtview = () => {
   const autoPlay = true;
-  const images = [
-    "oceann.jpg",
-    "diet.jpg",
-    "acampament.jpg",
-    "yoha.jpg",
-    "family.jpg",
-  ];
+  const images = ["oceann.jpg", "diet.jpg"];
 
   const [selectedIndex, setselectedIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(images[0]);
@@ -59,8 +53,8 @@ const Fisrtview = () => {
           />
           <article className="paragraph">
             <h1>
-              Su viaje de
-              <span className="cmp-text--secondary"> salud emocional</span>{" "}
+              Su viaje de salud emocional
+              {/* <span className="cmp-text--secondary"> </span> */}
               empieza aquí
             </h1>
             <h2>Conoce nuestros profesionales con licencia</h2>
@@ -82,9 +76,7 @@ const Fisrtview = () => {
   );
 };
 
-
 export default Fisrtview;
-
 
 /* 
 

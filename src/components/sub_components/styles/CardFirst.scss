@@ -3,15 +3,19 @@
 .component-card {
     @extend %center;
     flex-direction: column;
-    width: 27rem;
+    min-width: 27rem;
+    min-height: 30rem;
     border-radius: 0.4rem;
-    background: #8f8f8f14;
+    background: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     overflow: hidden;
     justify-content: flex-start;
 
     .card--bottom {
         padding: 1rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
 
         .card-category {
             display: flex;
@@ -24,6 +28,7 @@
 
     .card--figure {
         width: 100%;
+        min-height: 20rem;
         overflow: hidden;
         height: 14rem;
         position: relative;
@@ -37,16 +42,17 @@
             top: 0;
             right: 0;
             @extend %center;
-             gap: 0.5rem;
-             padding: 0.5rem;
-             img{
+            gap: 0.5rem;
+            padding: 0.5rem;
+
+            img {
                 width: 3rem;
                 height: 3rem;
                 border-radius: 50%;
                 border: 2px solid $text-gray;
                 background: $text-gray;
                 transition: all .3s;
-             }
+            }
         }
     }
 
@@ -54,6 +60,24 @@
         .card--figure .card-image--background {
             transform: scale(1.4);
             transition: all 0.9s;
+        }
+    }
+
+    @media (min-width: $layout-breakpoint-small) {
+        .card--figure {
+            min-height: 30rem;
+        }
+
+    }
+
+    @media (min-width: $layout-breakpoint-medium) {
+        min-height: 79vh;
+
+        .card--bottom {
+            padding-left: 3rem;
+            p {
+                margin: 21px 12% 0 0;
+            }
         }
     }
 }

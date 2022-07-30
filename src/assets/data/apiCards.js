@@ -10,7 +10,7 @@ export const api_cards = [
   {
     id: 1,
     tittle: "Juego para pasar un día de verano en casa",
-    text: "¿Quieres conocer algunos juegos divertidos para pasar un día de verano en casa? Presta atención a este artículo. ¡Te damos...",
+    text: "¿Quieres conocer algunos juegos divertidos para pasar un día de verano en casa? Presta atención a este artículo. El escondite es un divertido juego tradicional, perfecto para jugar al aire libre en verano. No necesitas ningún material para jugar al escondite, ¡sólo mucha imaginación! El objetivo del juego del escondite es ocultarse y no ser descubierto hasta el final.",
     category: api_category[1].name,
     rank: 1, 
     image: happy,
