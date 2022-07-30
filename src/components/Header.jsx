@@ -49,13 +49,6 @@ const Header = () => {
 
   return (
     <header className={`component-header ${show_nav.navbar}`}>
-      
-      <button
-        style={{ background: "black", position: "fixed" }}
-        onClick={mOnClickButton}
-      >
-        TEST
-      </button>
 
       <section className={`header-bottom ${btn_search ? "btn_search" : ""}`}>
         <form
@@ -72,9 +65,9 @@ const Header = () => {
             }}
             className="header-input"
             value={inn_search}
-            onKeyUp={(e) => {
-              e.key === "Enter" && mOnClickButton(e);
-            }}
+            // onKeyUp={(e) => {
+            //   e.key === "Enter" && mOnClickButton(e);
+            // }}
           />
         </form>
       </section>
@@ -105,10 +98,10 @@ const Header = () => {
             <img src="https://i.ibb.co/5Rxd8d1/loupe.png" alt="" />
           </button>
           <button className="right-button darkMode">
-            <img src={require("./../assets/icons/dark.svg").default} alt="" />
+            <img src={require("./../assets/icons/dark.svg").default} alt="icon" />
           </button>
-          <button className="right-button user">
-            <img src={require("../assets/icons/user.svg").default} alt="" />
+          <button className="right-button user" onClick={mOnClickButton}>
+            <img src={require("../assets/icons/user.svg").default} alt="icon" />
           </button>
         </section>
       </section>

@@ -11,6 +11,9 @@ $text-gray : #B1B7BD;
 
 $shadow : 0 0 13px 0 rgba(185,185,185, .25);
 
+$base-secondary : royalblue;
+$base-dark-mode : rgb(58, 58, 58);
+
 /* MEDIA QUERIES */
 $layout-breakpoint-small: 470px;
 $layout-breakpoint-medium: 850px;
@@ -22,3 +25,6 @@ $layout-breakpoint-large: 1100px;
     align-items: center;
     justify-content: center;
 }
+
+// ICONS
+// https://iconmonstr.com/
