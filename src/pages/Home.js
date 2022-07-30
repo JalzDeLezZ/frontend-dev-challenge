@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Newsletter from "../components/Newsletter";
 import Fisrtview from "../components/Fisrtview.jsx";
+import Questions from "../components/Questions.jsx";
 import { ContentCards } from "../components/ContentCards";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <main>
         <Fisrtview />
         <ContentCards />
+        <Questions />
         <Newsletter />
       </main>
       <Footer />

@@ -82,6 +82,12 @@ const Fisrtview = () => {
   );
 };
 
+
+export default Fisrtview;
+
+
+/* 
+
 const Cover = () => {
   return (
     <div className="firstview-main">
@@ -108,4 +114,4 @@ const Cover = () => {
   );
 };
 
-export default Fisrtview;
+*/
