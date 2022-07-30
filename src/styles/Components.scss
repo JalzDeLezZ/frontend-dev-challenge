@@ -109,27 +109,27 @@
     color: $text-pink;
 }
 
+.cmp-scrollbar {
+
+    &::-webkit-scrollbar-track {
+        // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #ffffffd4;
+    }
+
+    &::-webkit-scrollbar {
+        width: 9px;
+        // height: 9px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: white;
+    }
+}
+
 /* 
-
-&::-webkit-scrollbar-track {
-    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); * /
-    border-radius: 10px;
-    background-color: #ffffffd4;
-}
-
-&::-webkit-scrollbar {
-    display: none;
-    // width: 9px;
-    // height: 9px;
-}
-
-&::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); * /
-    background-color: #00d9ff71;
-}
-
-
     overflow: scroll;
     overflow-x: hidden;
 */
