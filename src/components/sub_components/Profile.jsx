@@ -1,6 +1,7 @@
 import React from "react";
 import { MY_BTN_DOWN } from "./Buttons";
 import "./styles/Profile.scss";
+import { MY_GROUP_INPUT } from "./InputGroup";
 
 const user = {
   name: "James Jalz",
@@ -21,6 +22,8 @@ const user = {
 const Profile = () => {
   return (
     <section className="sub-component--profile">
+      <MY_GROUP_INPUT />
+
       <section className="profile--personal_info">
         <figure className="personal_info--photo">
           <img src={user.photo} alt="" />
@@ -60,13 +63,7 @@ const Profile = () => {
       <MY_BTN_DOWN />
 
       <section className="profile--form">
-        <form className="form--profile">
-            <div className="groupInput">
-                <label htmlFor=""></label>
-                <input type="text" />
-                <span className="error"></span>
-            </div>
-        </form>
+        <form className="form--profile"></form>
       </section>
     </section>
   );

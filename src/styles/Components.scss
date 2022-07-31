@@ -235,7 +235,7 @@
     width: 0;
 }
 
-.cmp-line_divider_oblique{
+.cmp-line_divider_oblique {
     display: inline-block;
     transform: rotate(45deg);
     font-weight: bold;
@@ -243,18 +243,19 @@
     color: black;
 }
 
-.cmp-qr--jalz{
+.cmp-qr--jalz {
     width: 12rem;
     height: 12rem;
     overflow: hidden;
-    .qr-jalz--img{
+
+    .qr-jalz--img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 }
 
-.AS-OF-LUCK{
+.AS-OF-LUCK {
     font-size: 1.5rem;
     font-weight: bold;
     color: black;
