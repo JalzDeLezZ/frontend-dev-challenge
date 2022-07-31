@@ -1,0 +1,75 @@
+@import '../../../styles/Variables.scss';
+
+.sub-component--profile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    .profile--personal_info {
+        width: 100%;
+
+        .personal_info--photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            place-items: center;
+            margin: 0 auto;
+
+            img {
+                width: auto;
+                height: 100%;
+                position: absolute;
+            }
+        }
+
+        .personal_info--information {
+            width: 100%;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .profile--name {
+                margin: 1rem 0;
+            }
+
+            .profile--data {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                gap: 1rem;
+
+                p {
+                    font-weight: bold;
+                }
+            }
+
+            .profile--skills {
+                margin: 2rem 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+        }
+    }
+
+    .profile--form{
+        width: 100%;
+        margin-top: 2rem;
+        .form--profile{
+            
+        }
+    }
+
+    @media (min-width: $layout-breakpoint-small) {}
+
+    @media (min-width: $layout-breakpoint-medium) {}
+
+}
