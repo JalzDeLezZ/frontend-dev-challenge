@@ -14,23 +14,11 @@ const CardSecondary = (props) => {
   };
 
   return (
-    <section className="component-card_secondary" ref={rTarget} >
+    <section className="component-card_secondary" ref={rTarget}>
       <header className="c-secondary--content--header">
         <figure className="c-secondary--figure">
           <img className="figure--image" src={props.image} alt="" />
           {props.isFavorite ? (
-            <button
-              type="buttom"
-              className="button--add"
-              onClick={(e) => props.pMAddFavorite(e)}
-              value={parseInt(props.id)}
-            >
-              <img
-                src={require("../../assets/icons/add-fav.svg").default}
-                alt={props.icon}
-              />
-            </button>
-          ) : (
             <button
               type="buttom"
               className="button--remove"
@@ -42,18 +30,28 @@ const CardSecondary = (props) => {
                 alt={props.icon}
               />
             </button>
+          ) : (
+            <button
+              type="buttom"
+              className="button--add"
+              onClick={(e) => props.pMAddFavorite(e)}
+              value={parseInt(props.id)}
+            >
+              <img
+                src={require("../../assets/icons/add-fav.svg").default}
+                alt={props.icon}
+              />
+            </button>
           )}
         </figure>
         <article className="c-secondary--article">
           <h5>{props.tittle}</h5>
         </article>
       </header>
-      <article className="c-secondary-detail">
-        {props.text}
-      </article>
-        <button id={props.id} onClick={mValidateFunction}>
-          Details
-        </button>
+      <article className="c-secondary-detail">{props.text}</article>
+      <button id={props.id} onClick={mValidateFunction}>
+        Details
+      </button>
     </section>
   );
 };

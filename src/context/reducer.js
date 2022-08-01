@@ -5,13 +5,16 @@ const Reducer = (state, action) => {
         s_modal: !state.s_modal,
       };
     }
-    
+
     case "DARK": {
       return {
         s_darkMode: !state.s_darkMode,
       };
     }
-
+    case "UPDATE_CARDS":
+      return {
+        cards: action.payload,
+      }
     default: {
       return state;
     }
