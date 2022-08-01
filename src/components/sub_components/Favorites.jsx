@@ -1,13 +1,18 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { useLocalStorage } from "../../context/hooks";
 import CardSecondary from "./CardSecondary.jsx";
 import "./styles/Favorites.scss";
+import { AllContext } from "../../context/store.js";
 
 const Favorites = () => {
   const [favorites, setFavorites] = useLocalStorage("favorites", []);
   const [cards, setCards] = useLocalStorage("cards", []);
 
   const rSection = useRef(null);
+
+  const {
+    state: { cards: stateCards },
+  } = useContext(AllContext);
 
   const handleClick = (event, ref) => {
     // console.log("click", event, "=========", ref);
@@ -46,6 +51,9 @@ const Favorites = () => {
       return card;
     });
     setCards(newCards);
+
+    //reload the page
+    // window.location.reload();
   };
 
   return (

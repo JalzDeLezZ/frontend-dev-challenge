@@ -9,16 +9,10 @@ const ContentCards = () => {
   const [favorites, setFavorites] = useLocalStorage("favorites", []);
   const [cards, setCards] = useLocalStorage("cards", api_cards);
 
-  const [myCards , setMyCards] = useState([]);
-
-  useEffect(() => {
-    setMyCards(cards);
-  }, [cards]);
-
-  const card_first = myCards.sort((a, b) => a.rank - b.rank)[0];
+  const card_first = cards.sort((a, b) => a.rank - b.rank)[0];
   // const cards_tertiary = cards.filter((card) => card.rank === 3);
 
-  const cards_secondary = myCards.filter((card) => card !== card_first);
+  const cards_secondary = cards.filter((card) => card !== card_first);
 
   const mAddFavorite = (event) => {
     console.log("Add favorite");
