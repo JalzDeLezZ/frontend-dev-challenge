@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { MY_BTN_DOWN, MY_BTN_SEND } from "./Buttons";
 import "./styles/Profile.scss";
 import { MY_GROUP_INPUT } from "./InputGroup";
@@ -9,17 +9,23 @@ import { user } from "../../assets/data/apiUser.js";
 const Profile = () => {
   const [userData, setUserData] = useLocalStorage("userLS", user);
   const [image, setImage] = useLocalStorage("imageLS", {
-    url: "https://i.ibb.co/MNQtjMt/p.jpg",
+    url: "https://icon-library.com/images/2018/2206115_thin-line-user-icon-png-transparent-png.png",
   });
 
-  const [formValues, setFormValues] = useState({
+  const oValues = {
     inn_name: { value: "", error: null },
     inn_lastName: { value: "", error: null },
     inn_email: { value: "", error: null },
     inn_phone: { value: "", error: null },
-    inn_photo: { value: "", error: null },
     inn_skills: { value: [], error: null },
-  });
+    qr: "https://i.ibb.co/QrhSpJZ/qrcode-jalzdelezz-github-io.png",
+    photo:
+      "https://icon-library.com/images/2018/2206115_thin-line-user-icon-png-transparent-png.png",
+  };
+
+  const [formValues, setFormValues] = useState(oValues);
+
+  const rForm = useRef(null);
 
   const [file, setFile] = useState("");
 
@@ -37,7 +43,6 @@ const Profile = () => {
   const validateForm = () => {
     let isError = false;
     Object.values(formValues).forEach((val) => {
-      console.log(formValues);
       if (val.error) {
         isError = true;
       }
@@ -51,19 +56,23 @@ const Profile = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const errors = validateForm();
-    if (errors.length === 0) {
+    if (!errors) {
       console.log("Success");
       setUserData({
-        ...userData,
         name: formValues.inn_name.value,
         lastName: formValues.inn_lastName.value,
         email: formValues.inn_email.value,
         phone: formValues.inn_phone.value,
-        photo: formValues.inn_photo.value,
+        photo: image.url || formValues.photo,
         skills: formValues.inn_skills.value,
+        qr: formValues.qr,
+      });
+      setFormValues(oValues);
+      setImage({
+        url: "https://icon-library.com/images/2018/2206115_thin-line-user-icon-png-transparent-png.png",
       });
     } else {
-      console.log("Error");
+      console.log("Not Success Submit");
     }
   };
 
@@ -82,19 +91,10 @@ const Profile = () => {
 
   return (
     <section className="sub-component--profile">
-      <button
-        type="button"
-        onClick={() => {
-          // mUploadFile();
-        }}
-      >
-        XXXXXX
-      </button>
       <section className="profile--personal_info">
         <div className="personal_info--information">
           <figure className="personal_info--photo">
-            {/* <img src={userData.photo} alt="" /> */}
-            <img src={image.url} alt="" />
+            <img src={userData.photo} alt="" />
             {/* <img src={image.url} alt="" /> */}
           </figure>
 
@@ -118,10 +118,10 @@ const Profile = () => {
             <article className="skills--content">
               <h5>Skills</h5>
               <ol>
-                {userData.skills.map((skill) => (
-                  <li key={skill.id}>
+                {userData.skills.map((skill, i) => (
+                  <li key={i}>
                     <span className="AS-OF-LUCK">♠</span>
-                    {skill.name}
+                    {skill}
                   </li>
                 ))}
               </ol>
@@ -142,6 +142,7 @@ const Profile = () => {
       <section className="profile--form">
         <h3 className="profile--form_title">Edit Profile</h3>
         <form
+          ref={rForm}
           className="form--profile"
           autoComplete="off"
           onSubmit={handleSubmit}
@@ -228,20 +229,14 @@ const Profile = () => {
             pFormValues={formValues}
             pSetFormValues={setFormValues}
           />
-          <div>
-            <ol style={{ color: "black" }}>
-              {formValues.inn_skills.value?.map((skill, i) => (
-                <li key={i}>
-                  <span className="AS-OF-LUCK">♠</span>
-                  {skill}
-                </li>
-              ))}
-            </ol>
-
-            <figure
-              style={{ background: "red", width: "90px", height: "90px" }}
-            ></figure>
-          </div>
+          <ol className="show-skills">
+            {formValues.inn_skills.value?.map((skill, i) => (
+              <li key={i}>
+                <span className="AS-OF-LUCK">♠</span>
+                {skill}
+              </li>
+            ))}
+          </ol>
           <MY_BTN_SEND />
         </form>
       </section>
@@ -251,10 +246,7 @@ const Profile = () => {
 
 export default Profile;
 
-/* 
-
-
-        
+/*
             // setFormValues({
     //   ...formValues,
     //   inn_photo: {
