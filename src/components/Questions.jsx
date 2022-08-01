@@ -45,10 +45,7 @@ const Questions = () => {
           <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Que metodos de pago disponibles tienen?{" "}
-              <img
-                src={require("../assets/icons/suma.svg").default}
-                alt="Abrir Respuesta"
-              />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/></svg>
             </h5>
             <p className="respuesta">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem
@@ -61,10 +58,7 @@ const Questions = () => {
           <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Tienen plazo de pago?{" "}
-              <img
-                src={require("../assets/icons/suma.svg").default}
-                alt="Abrir Respuesta"
-              />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/></svg>
             </h5>
             <p className="respuesta">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -78,10 +72,7 @@ const Questions = () => {
           <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿En que ciudades están disponibles las citas de consultoría?{" "}
-              <img
-                src={require("../assets/icons/suma.svg").default}
-                alt="Abrir Respuesta"
-              />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/></svg>
             </h5>
             <p className="respuesta">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -93,10 +84,7 @@ const Questions = () => {
           <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Están abalados por la OMS?{" "}
-              <img
-                src={require("../assets/icons/suma.svg").default}
-                alt="Abrir Respuesta"
-              />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/></svg>
             </h5>
             <p className="respuesta">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -109,10 +97,7 @@ const Questions = () => {
           <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Como puedo saber si son confiables?{" "}
-              <img
-                src={require("../assets/icons/suma.svg").default}
-                alt="Abrir Respuesta"
-              />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/></svg>
             </h5>
             <p className="respuesta">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -123,10 +108,7 @@ const Questions = () => {
           <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Que pasa con mis datos personales?{" "}
-              <img
-                src={require("../assets/icons/suma.svg").default}
-                alt="Abrir Respuesta"
-              />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/></svg>
             </h5>
             <p className="respuesta">
               Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -140,10 +122,7 @@ const Questions = () => {
           <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Como puedo acceder a mis pedidos?{" "}
-              <img
-                src={require("../assets/icons/suma.svg").default}
-                alt="Abrir Respuesta"
-              />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/></svg>
             </h5>
             <p className="respuesta">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -156,10 +135,7 @@ const Questions = () => {
           <div className="contenedor-pregunta">
             <h5 className="pregunta">
               ¿Como puedo cambiar mi contraseña?{" "}
-              <img
-                src={require("../assets/icons/suma.svg").default}
-                alt="Abrir Respuesta"
-              />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/></svg>
             </h5>
             <p className="respuesta">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.

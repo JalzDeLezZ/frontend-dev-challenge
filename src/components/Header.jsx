@@ -5,7 +5,7 @@ import "./styles/Header.scss";
 
 const Header = () => {
   const {
-    // statements: { s_modal },
+    // statements: { s_darkMode },
     xDispatch,
   } = useContext(AllContext);
 
@@ -14,6 +14,10 @@ const Header = () => {
     xDispatch({ type: "TOGGLE" });
   };
 
+  const mDarkMode = (e) => {
+    e.preventDefault();
+    xDispatch({ type: "DARK" });
+  };
   // console.log("Modal", s_modal);
 
   const [btn_navBar, setBtn_navBar] = useState(false);
@@ -38,7 +42,8 @@ const Header = () => {
     [y]
   );
 
-  useEffect(() => { // by good practices
+  useEffect(() => {
+    // by good practices
     setY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -46,10 +51,8 @@ const Header = () => {
     };
   }, [handleScroll]);
 
-
   return (
     <header className={`component-header ${show_nav.navbar}`}>
-
       <section className={`header-bottom ${btn_search ? "btn_search" : ""}`}>
         <form
           onSubmit={(e) => {
@@ -97,8 +100,13 @@ const Header = () => {
           >
             <img src="https://i.ibb.co/5Rxd8d1/loupe.png" alt="" />
           </button>
-          <button className="right-button darkMode">
-            <img src={require("./../assets/icons/dark.svg").default} alt="icon" />
+          <button className="right-button darkMode"
+          onClick={mDarkMode}
+          >
+            <img
+              src={require("./../assets/icons/dark.svg").default}
+              alt="icon"
+            />
           </button>
           <button className="right-button user" onClick={mOnClickButton}>
             <img src={require("../assets/icons/user.svg").default} alt="icon" />

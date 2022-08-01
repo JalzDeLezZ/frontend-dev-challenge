@@ -1,0 +1,94 @@
+@import './Variables.scss';
+$base-dark-mode: #303030;
+$base-dark-mode--secondary: rgb(91 99 124);
+$base-dark-mode--cards: #313543;
+$base-dark-mode--paragraph: #9aa3a6;
+$base-dark-mode--cards-secondary: #272727;
+
+.general--darkMode {
+    //change variables scss to dark mode
+    background-color: $base-dark-mode;
+
+    .component-header {
+        .ht1-burgerbutton {
+            filter: invert(100%);
+
+            &.btn_navBar {
+                filter: none;
+            }
+        }
+
+        box-shadow: #ffffffc9 0px -44px 60px 21px;
+
+        .ht3-right {
+            filter: invert(1);
+        }
+
+        &.down {
+            background-color: $base-dark-mode;
+        }
+
+        &.init {
+            background-color: rgba(0, 0, 0, 0.6);
+
+        }
+    }
+
+    .component-Firstview {
+        * {
+            color: white;
+        }
+
+    }
+
+    .component-newsletter {
+        background-color: $base-dark-mode--cards;
+        // box-shadow: #ffffffc9 0px -44px 60px 21px;
+    }
+
+    .firstview--background {
+        display: none;
+
+        .main--mask {
+            filter: invert(1);
+            mix-blend-mode: darken;
+        }
+    }
+
+    .component-footer {
+        background-color: $base-dark-mode;
+    }
+
+    .component-card {
+        background-color: $base-dark-mode--cards;
+    }
+
+    .component-card_secondary {
+        background-color: $base-dark-mode--cards;
+    }
+
+    .component-question{
+        .categorias{
+            .categoria{
+                background-color: $base-dark-mode--cards-secondary;
+            }
+        }
+        .preguntas {
+            .contenedor-preguntas .contenedor-pregunta{
+                background: $base-dark-mode--cards-secondary;
+            }
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $base-dark-mode--secondary;
+    }
+    p{
+        color: $base-dark-mode--paragraph;
+    }
+}

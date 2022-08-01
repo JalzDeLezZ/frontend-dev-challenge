@@ -189,18 +189,16 @@
         align-items: flex-start;
 
         .profile--personal_info {
+            margin-top: 3vh;
+            padding: 2rem 0;
+            border-right: dashed black;
+
             .personal_info--information {
-                
-                .personal_info--photo {
-                     
-                }
+                 
                 
                 .personal_info--data {
-
-                    h1 {
-                    }
+ 
                     .profile--data{
-                        justify-content: flex-start;
                         h5{
                             font-size: 2.3rem;
                         }
@@ -226,6 +224,12 @@
                     .skills--content {
                         grid-column: 2;
                         grid-row: 1;
+                        ol{
+                            gap: 0;
+                            li{
+                                margin: 0 1rem;
+                            }
+                        }
                         h5{
                             font-size: rem;
                         }
