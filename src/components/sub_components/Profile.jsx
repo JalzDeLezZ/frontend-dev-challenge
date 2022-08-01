@@ -8,7 +8,9 @@ import { user } from "../../assets/data/apiUser.js";
 
 const Profile = () => {
   const [userData, setUserData] = useLocalStorage("userLS", user);
-  const [image, setImage] = useLocalStorage("imageLS", "");
+  const [image, setImage] = useLocalStorage("imageLS", {
+    url: "https://i.ibb.co/MNQtjMt/p.jpg",
+  });
 
   const [formValues, setFormValues] = useState({
     inn_name: { value: "", error: null },
@@ -66,25 +68,24 @@ const Profile = () => {
   };
 
   const mSetFile = (e) => {
-    setFile(e.target.files[0]);
-    const url_img = URL.createObjectURL(e.target.files[0]);
-    console.log(e.target.files[0]);
-    setFormValues({
-      ...formValues,
-      inn_photo: {
-        ...formValues.inn_photo,
-        value: url_img,
-        bitmap: e.target.files[0],
-      },
-    });
-  }
+    const { files } = e.target;
+    setFile(files[0]);
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      setImage({
+        url: e.target.result,
+      });
+    };
+    reader.readAsDataURL(files[0]);
+  };
 
   return (
     <section className="sub-component--profile">
       <button
         type="button"
         onClick={() => {
-          validateForm();
+          // mUploadFile();
         }}
       >
         XXXXXX
@@ -92,7 +93,9 @@ const Profile = () => {
       <section className="profile--personal_info">
         <div className="personal_info--information">
           <figure className="personal_info--photo">
-            <img src={userData.photo} alt="" />
+            {/* <img src={userData.photo} alt="" /> */}
+            <img src={image.url} alt="" />
+            {/* <img src={image.url} alt="" /> */}
           </figure>
 
           <div className="personal_info--data">
@@ -252,7 +255,14 @@ export default Profile;
 
 
         
-        
+            // setFormValues({
+    //   ...formValues,
+    //   inn_photo: {
+    //     ...formValues.inn_photo,
+    //     value: url_img,
+    //     bitmap: e.target.files[0],
+    //   },
+    // });
 
 
 */
