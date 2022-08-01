@@ -11,7 +11,19 @@ const CardFirst = (props) => {
         />
         <ol className="figure-options">
           <li>
-            <button type="buttom">
+            <button type="buttom"
+            value={props.id}
+            onClick={(e) => props.pMRemoveFavorite(e)}>
+              <img
+                src={require("../../assets/icons/subtract-fav.svg").default}
+                alt={props.icon}
+              />
+            </button>
+          </li>
+          <li>
+            <button type="buttom"
+            value={props.id}
+            onClick={(e) => props.pMAddFavorite(e)}>
               <img
                 src={require("../../assets/icons/add-fav.svg").default}
                 alt={props.icon}

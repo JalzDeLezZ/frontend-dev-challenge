@@ -12,7 +12,7 @@ function App() {
 
   return (
     <Fragment>
-      <div className={s_darkMode && "general--darkMode"}>
+      <div className={s_darkMode ? "general--darkMode" : null}>
         {s_modal && (
           <Portal>
             <Modal />

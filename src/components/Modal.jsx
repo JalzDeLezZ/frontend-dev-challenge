@@ -7,7 +7,7 @@ import Profile from "./sub_components/Profile.jsx";
 const Modal = () => {
   const { xDispatch } = useContext(AllContext);
 
-  const [tab, setTab] = useState("0");
+  const [tab, setTab] = useState("1");
 
   const mTabChange = (e) => {
     setTab(e.target.value);

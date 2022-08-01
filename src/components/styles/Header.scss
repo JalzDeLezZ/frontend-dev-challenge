@@ -1,10 +1,11 @@
 @import '../../styles/Variables.scss';
 
 .component-header {
-    .test--xxx{
+    .test--xxx {
         background-color: $base-secondary;
         padding: 2rem 1rem;
     }
+
     position: fixed;
     z-index: 4;
     width: 100%;
@@ -159,8 +160,7 @@
 
 
                     background: #e8e8e8;
-                    box-shadow: 20px 20px 60px #c5c5c5,
-                        -20px -20px 60px #ffffff;
+                    box-shadow: 9px 0px 19px #c5c5c5, -1px -1px 9px #ffffff;
                     transition: 0.3s;
                 }
 
@@ -180,7 +180,7 @@
         z-index: 1;
         padding: 12vh 9vw;
         transition: 0.6s;
-        
+
         nav ul {
             display: flex;
             flex-direction: column;
