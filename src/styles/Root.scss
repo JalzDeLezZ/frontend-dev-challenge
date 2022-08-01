@@ -81,9 +81,16 @@ a {
 }
 
 li {
+    font-family: 'Coursive', cursive;
     font-size: 1.2rem;
 }
 
 footer {
     color: white;
+}
+select{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }

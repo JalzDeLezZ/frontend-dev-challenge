@@ -1,15 +1,66 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./styles/InputGroup.module.scss";
 
-const MY_GROUP_INPUT = () => {
+const MY_GROUP_INPUT = ({
+  pLabel,
+  pName,
+  pFormValues,
+  pSetFormValues,
+  pOnChange,
+  pRegEx,
+  pLegendError,
+  pInputValue,
+}) => {
+  const mValidation = (e) => {
+    const { value, name } = e.target;
+    if (pRegEx.test(value)) {
+      // console.log("valid");
+      pSetFormValues({
+        ...pFormValues,
+        [name]: {
+          ...pFormValues[name],
+          error: false,
+        },
+      });
+    } else {
+      // console.log("invalid");
+      pSetFormValues({
+        ...pFormValues,
+        [name]: {
+          ...pFormValues[name],
+          error: true,
+        },
+      });
+    }
+  };
+
+  const vNullOrEmpty = () => {
+    if (pFormValues[pName].value === null || pFormValues[pName].value === "") {
+      return true;
+    }
+    return false;
+  };
+
   return (
     <div className={styles["cmp-groupInput"]}>
-      <input required type="search" className={styles.input} />
+      <input
+        required
+        name={pName}
+        value={pFormValues[pName].value}
+        onChange={pOnChange}
+        type="search"
+        className={styles.input}
+        onBlur={(e) => mValidation(e)}
+        onKeyUp={(e) => mValidation(e)}
+      />
       <span className={styles.highlight} />
       <span className={styles.bar} />
-      <label>Name</label>
+      <label>{pLabel}</label>
+      {pFormValues[pName].error && vNullOrEmpty() === false && (
+        <span className={styles.error}>{pLegendError}</span>
+      )}
     </div>
   );
 };
 
-export {MY_GROUP_INPUT};
+export { MY_GROUP_INPUT };

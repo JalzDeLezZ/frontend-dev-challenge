@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    gap: 1rem;
 
     .profile--personal_info {
         width: 100%;
@@ -37,6 +38,9 @@
 
             .profile--name {
                 margin: 1rem 0;
+                color: $input-color;
+                text-align: center;
+                // color: $text-secondary;
             }
 
             .profile--data {
@@ -45,7 +49,12 @@
                 width: 100%;
                 gap: 1rem;
 
+                h5 {
+                    color: $input-color;
+                }
+
                 p {
+                    color: $text-gray;
                     font-weight: bold;
                 }
             }
@@ -55,21 +64,173 @@
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
+
+                .skills--content {
+                    max-width: 314px;
+
+                    h5 {
+                        color: $input-color;
+                    }
+
+                    ol {
+                        margin-left: 1rem;
+                    }
+                }
             }
 
         }
     }
 
-    .profile--form{
+    .profile--form {
         width: 100%;
-        margin-top: 2rem;
-        .form--profile{
-            
+        padding: 2rem 0;
+
+
+        .profile--form_title {
+            margin-bottom: 1rem;
+            color: $input-color;
+            text-align: center;
+        }
+
+    }
+
+    @media (min-width: $layout-breakpoint-small) {
+
+        .profile--personal_info {
+            .personal_info--photo {
+                width: 169px;
+                height: 169px;
+            }
+
+            .personal_info--information {
+                padding: 0 12%;
+
+                .profile--name {
+                    font-size: 4.9rem;
+                }
+
+                .profile--data {
+                    justify-content: center;
+
+                    h5 {
+                        font-size: 2.3rem;
+                    }
+
+                    p {
+                        font-size: 2rem;
+                    }
+                }
+
+                .profile--skills {
+                    // padding: 0 9%;
+                    flex-direction: column;
+
+                    .skills--content {
+                        text-align: center;
+                        color: $text-gray;
+                        font-weight: bold;
+
+                        h5 {
+                            font-size: 2.3rem;
+                        }
+
+                        ol {
+                            display: flex;
+                            justify-content: space-around;
+                            gap: 2rem;
+                            flex-flow: wrap;
+                            margin: 0 auto;
+
+                            li {
+                                font-size: 2rem;
+
+                                span {
+                                    color: $text-gray;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .profile--form {
+
+            .form--profile {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+            }
+
+            .profile--form_title {
+                font-size: 3.6rem;
+            }
         }
     }
 
-    @media (min-width: $layout-breakpoint-small) {}
+    @media (min-width: $layout-breakpoint-medium) {
 
-    @media (min-width: $layout-breakpoint-medium) {}
+        flex-direction: row;
+        align-items: flex-start;
 
+        .profile--personal_info {
+            .personal_info--information {
+                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                place-items: center;
+
+                .personal_info--photo {
+                    grid-area: 1 / 1;
+                    width: 141px;
+                    height: 141px;
+                }
+
+                .personal_info--data {
+                    grid-area: 1 / 2;
+
+                    h1 {
+                        font-size: 4rem;
+                    }
+                }
+
+                .profile--skills {
+                    grid-area: 2 / 1 / 2 / 3;
+                    // flex-flow: row-reverse;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: 1fr;
+                    place-items: center;
+
+                    .cmp-qr--jalz {
+                        width: 70%;
+                        max-width: 174px;
+                        margin: 0;
+                        height: fit-content;
+
+                        img {
+                            height: auto;
+                        }
+                    }
+
+                    .skills--content {
+                        grid-column: 2;
+                        grid-row: 1;
+                    }
+                }
+            }
+        }
+
+        .Buttons_scrolldown__QcPPg {
+            display: none;
+        }
+
+        .profile--form {
+            margin-top: 3vh;
+        }
+    }
 }
