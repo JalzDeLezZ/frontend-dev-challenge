@@ -14,6 +14,7 @@ export const api_cards = [
     category: api_category[1].name,
     rank: 1, 
     image: happy,
+    isFavorite: false,
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ export const api_cards = [
     text: "Para un padre siempre es duro observar cómo su hijo agrede a otras personas. Pero el impacto es mayor cuando…",
     category: api_category[1].name,
     rank: 2, 
-    image: babys
+    image: babys,
+    isFavorite: false,
   },
   {
     id: 3,
@@ -29,7 +31,8 @@ export const api_cards = [
     text: "Inseguridad y baja autoestima tienen una relación directa. Son muchas las personas que viven en esa cuerda floja donde todo…",
     category: api_category[0].name,
     rank: 3, 
-    image: playing
+    image: playing,
+    isFavorite: false,
   },
   {
     id: 4,
@@ -37,7 +40,8 @@ export const api_cards = [
     text: "A veces nos sentimos como Atlas, aquel titán al que Zeus castigó y le obligó a llevar el peso de…",
     category: api_category[0].name,
     rank: 3, 
-    image: sleep
+    image: sleep,
+    isFavorite: false,
   },
   {
     id: 5,
@@ -45,7 +49,8 @@ export const api_cards = [
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequuntur modi? Iste veniam vero quam quibusdam blanditiis quasi quae temporibus dolor quidem quos optio omnis.",
     category: api_category[2].name,
     rank: 3, 
-    image: mom
+    image: mom,
+    isFavorite: false,
   },
   {
     id: 6,
@@ -53,7 +58,8 @@ export const api_cards = [
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequuntur modi? Iste veniam vero quam quibusdam blanditiis quasi quae temporibus dolor quidem quos optio omnis.",
     category: api_category[2].name,
     rank: 2, 
-    image: workers 
+    image: workers ,
+    isFavorite: false,
   },
   {
     id: 7,
@@ -61,7 +67,8 @@ export const api_cards = [
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequuntur modi? Iste veniam vero quam quibusdam blanditiis quasi quae temporibus dolor quidem quos optio omnis.",
     category: api_category[2].name,
     rank: 2, 
-    image: "http://www.seobook.com/images/happy-app-users.jpg" 
+    image: "http://www.seobook.com/images/happy-app-users.jpg" ,
+    isFavorite: false,
   },
   {
     id: 8,
@@ -69,6 +76,7 @@ export const api_cards = [
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequuntur modi? Iste veniam vero quam quibusdam blanditiis quasi quae temporibus dolor quidem quos optio omnis.",
     category: api_category[2].name,
     rank: 2, 
-    image: "https://extremisimo.net/wp-content/uploads/2012/02/frases-amor-pareja.jpg" 
+    image: "https://extremisimo.net/wp-content/uploads/2012/02/frases-amor-pareja.jpg" ,
+    isFavorite: false,
   },
 ];

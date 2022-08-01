@@ -1,17 +1,61 @@
-import React from 'react'
-import './styles/CardSecondary.scss'
+import React, { useRef } from "react";
+import "./styles/CardSecondary.scss";
 
 const CardSecondary = (props) => {
-  return (
-    <section className='component-card_secondary'>
-        <figure className='c-secondary--figure'>
-            <img className='figure--image' src={props.image} alt="" />
-        </figure>
-        <article className='c-secondary--article'>
-            <h5>{props.tittle}</h5>
-        </article>
-    </section>
-  )
-}
+  const rTarget = useRef(null);
 
-export default CardSecondary
+  const mValidateFunction = (e) => {
+    //validate if I recieve a function from props
+    if (typeof props.mFunctionOpen === "function") {
+      props.mFunctionOpen(e, rTarget);
+    } else {
+      console.log("No function to open");
+    }
+  };
+
+  return (
+    <section className="component-card_secondary" ref={rTarget} >
+      <header className="c-secondary--content--header">
+        <figure className="c-secondary--figure">
+          <img className="figure--image" src={props.image} alt="" />
+          {props.isFavorite ? (
+            <button
+              type="buttom"
+              className="button--add"
+              onClick={(e) => props.pMAddFavorite(e)}
+              value={parseInt(props.id)}
+            >
+              <img
+                src={require("../../assets/icons/add-fav.svg").default}
+                alt={props.icon}
+              />
+            </button>
+          ) : (
+            <button
+              type="buttom"
+              className="button--remove"
+              onClick={(e) => props.mDeleteFavs(e)}
+              value={parseInt(props.id)}
+            >
+              <img
+                src={require("../../assets/icons/subtract-fav.svg").default}
+                alt={props.icon}
+              />
+            </button>
+          )}
+        </figure>
+        <article className="c-secondary--article">
+          <h5>{props.tittle}</h5>
+        </article>
+      </header>
+      <article className="c-secondary-detail">
+        {props.text}
+      </article>
+        <button id={props.id} onClick={mValidateFunction}>
+          Details
+        </button>
+    </section>
+  );
+};
+
+export default CardSecondary;

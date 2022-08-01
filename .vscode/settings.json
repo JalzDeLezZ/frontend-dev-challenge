@@ -4,4 +4,4 @@
         "**/.vscode/": true,
         "**/package-lock.json": true,
     },
-}
+} 

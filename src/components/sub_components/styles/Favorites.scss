@@ -1,0 +1,55 @@
+@import '../../../styles/Variables.scss';
+
+.component-favorites {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-gap: 2rem;
+
+    padding: 2rem;
+    place-items: flex-start;
+    justify-items: center;
+
+    .component-card_secondary {
+        width: 69vw;
+        // overflow: hidden;
+
+        .c-secondary--content--header {
+            transition: all 0.3s ease-in-out;
+            background-color: black;
+            border-radius: 0.4rem 0.4rem 0 0;
+            // cursor: pointer;
+
+            .c-secondary--article {
+                padding-left: 2rem;
+            }
+        }
+    }
+
+    @media (min-width: $layout-breakpoint-small) {
+
+        .component-card_secondary {
+            .c-secondary--content--header {
+                height: 147px;
+            }
+        }
+    }
+
+    @media (min-width: $layout-breakpoint-medium) {
+        // grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .component-card_secondary {
+            // transition: all 0.3s ease-in-out;
+            width: 39vw;
+
+            .c-secondary--content--header {
+                height: 147px;
+            }
+        }
+    }
+}
