@@ -104,8 +104,11 @@
         align-items: center;
     }
 
-    .pregunta img {
+    .pregunta svg {
         width: 14px;
+        path {
+            fill: $input-base;
+        }
     }
 
     .respuesta {

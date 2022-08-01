@@ -49,7 +49,8 @@ h6 {
 
 p {
     font-size: 1.2rem;
-    font-family: 'Merriweather', serif;
+    // font-family: 'Merriweather', serif;
+    font-family: 'Coursive', cursive;
     text-align: justify;
 }
 
@@ -80,9 +81,16 @@ a {
 }
 
 li {
+    font-family: 'Coursive', cursive;
     font-size: 1.2rem;
 }
 
 footer {
     color: white;
+}
+select{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }

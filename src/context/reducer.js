@@ -5,6 +5,13 @@ const Reducer = (state, action) => {
         s_modal: !state.s_modal,
       };
     }
+    
+    case "DARK": {
+      return {
+        s_darkMode: !state.s_darkMode,
+      };
+    }
+
     default: {
       return state;
     }

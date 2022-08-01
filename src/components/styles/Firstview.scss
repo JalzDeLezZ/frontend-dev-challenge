@@ -8,11 +8,12 @@
     display: grid;
     place-items: center;
 
-    .firstview--background{
+    .firstview--background {
         overflow: hidden;
         width: 100%;
         height: 100vh;
         position: absolute;
+
         .main--mask {
             position: absolute;
             top: 0;
@@ -20,6 +21,8 @@
             width: 146%;
             height: 100vh;
             z-index: 1;
+
+
             user-select: none;
             mix-blend-mode: screen;
         }

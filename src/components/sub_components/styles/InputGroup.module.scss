@@ -1,0 +1,121 @@
+.cmp-groupInput {
+    position: relative;
+    color: black;
+    width: fit-content;
+    margin: 0 auto;
+
+    .input {
+        font-size: 16px;
+        padding: 12px 7px 4px;
+        display: block;
+        width: 249px;
+        border: none;
+        border-bottom: 1px solid #265e6c;
+        background: transparent;
+        font-family: "Coursive", cursive;
+        color: #9a9a9a;
+        margin-top: 9px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    label {
+        color: #999;
+        font-size: 18px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    .input:focus~label,
+    .input:valid~label {
+        top: -9px;
+        font-size: 14px;
+        color: #265e6c;
+    }
+
+    .bar {
+        position: relative;
+        display: block;
+        width: 249px;
+    }
+
+    .bar:before,
+    .bar:after {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 1px;
+        position: absolute;
+        background: #265e6c;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s easeF all;
+    }
+
+    .bar:before {
+        left: 50%;
+    }
+
+    .bar:after {
+        right: 50%;
+    }
+
+    .input:focus~.bar:before,
+    .input:focus~.bar:after {
+        width: 50%;
+    }
+
+    .highlight {
+        position: absolute;
+        height: 60%;
+        width: 100px;
+        top: 25%;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    .input:focus~.highlight {
+        animation: inputHighlighter 0.3s ease;
+    }
+
+    .error {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #265e6c;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@media (min-width: 470px) {
+    .cmp-groupInput {
+        width: 69%;
+        max-width: 444px;
+
+        .input {
+            width: 100%;
+        }
+
+        .bar {
+            width: 100%;
+        }
+    }
+}

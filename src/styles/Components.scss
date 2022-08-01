@@ -235,7 +235,7 @@
     width: 0;
 }
 
-.cmp-line_divider_oblique{
+.cmp-line_divider_oblique {
     display: inline-block;
     transform: rotate(45deg);
     font-weight: bold;
@@ -243,21 +243,73 @@
     color: black;
 }
 
-.cmp-qr--jalz{
+.cmp-qr--jalz {
     width: 12rem;
     height: 12rem;
     overflow: hidden;
-    .qr-jalz--img{
+    .qr-jalz--img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
+
+    @media (min-width: $layout-breakpoint-small) {
+        margin: 2rem;
+        width: 21rem;
+        height: 21rem;
+    }
+
+    @media (min-width: $layout-breakpoint-medium) {}
+
 }
 
-.AS-OF-LUCK{
+.cmp--upload-img {
+    width: 141px;
+    height: 141px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+    }
+
+    .camera--label {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin: 1rem auto;
+        border-radius: 50%;
+        background-color: rgb(255 255 255 / 24%);
+        backdrop-filter: blur(1px);
+        width: 4rem;
+        height: 4rem;
+        box-shadow: black 0px 0px 21px;
+        display: grid;
+        place-items: center;
+        transition: 0.7s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+    }
+}
+
+.AS-OF-LUCK {
     font-size: 1.5rem;
     font-weight: bold;
     color: black;
     text-align: center;
     margin-right: 0.6rem;
+
+    @media (min-width: $layout-breakpoint-small) {
+        font-size: 2.5rem;
+    }
 }

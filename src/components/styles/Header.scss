@@ -1,4 +1,10 @@
+@import '../../styles/Variables.scss';
+
 .component-header {
+    .test--xxx{
+        background-color: $base-secondary;
+        padding: 2rem 1rem;
+    }
     position: fixed;
     z-index: 4;
     width: 100%;

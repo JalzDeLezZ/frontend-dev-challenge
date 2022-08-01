@@ -23,7 +23,7 @@ const Modal = () => {
         return <Profile />;
     }
   };
-
+  
   return (
     <section className="component-modal" onClick={(e) => e.stopPropagation()}>
       <div className="modal-exit--btn">
