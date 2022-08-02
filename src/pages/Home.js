@@ -2,8 +2,8 @@ import React, { Fragment } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Newsletter from "../components/Newsletter";
-import Fisrtview from "../components/Fisrtview.jsx";
-import Questions from "../components/Questions.jsx";
+import Fisrtview from "../components/Fisrtview";
+import Questions from "../components/Questions";
 import { ContentCards } from "../components/ContentCards";
 
 const Home = () => {
