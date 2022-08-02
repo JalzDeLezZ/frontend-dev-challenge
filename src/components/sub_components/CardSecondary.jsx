@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { MY_BTN_MAN } from "./Buttons";
 import "./styles/CardSecondary.scss";
 
 const CardSecondary = (props) => {
@@ -49,9 +50,11 @@ const CardSecondary = (props) => {
         </article>
       </header>
       <article className="c-secondary-detail">{props.text}</article>
-      <button id={props.id} onClick={mValidateFunction}>
-        Details
-      </button>
+      {
+        props.detail && (
+          <MY_BTN_MAN id={props.id} onClick={mValidateFunction}/>
+        )
+      }
     </section>
   );
 };

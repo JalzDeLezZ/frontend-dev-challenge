@@ -42,7 +42,7 @@ const Fisrtview = () => {
   });
 
   return (
-    <section className="component-Firstview">
+    <section id="iCarousel" className="component-Firstview">
       <figure className="firstview--background">
         <img
           src={require("../assets/images/mask.jpg")}

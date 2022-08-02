@@ -32,7 +32,7 @@ const Questions = () => {
   }, []);
 
   return (
-    <section className="component-question">
+    <section id="iQuestions" className="component-question">
       <h1 className="tittle">Preguntas Frecuentes</h1>
       <Categories category={category} setCategory={setCategory} />
 

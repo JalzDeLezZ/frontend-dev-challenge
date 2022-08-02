@@ -115,19 +115,19 @@ const Header = () => {
       </section>
 
       <section className={`header-navBar ${btn_navBar ? "btn_navBar" : ""}`}>
-        <nav>
+        <nav className="cmp--navigation--bar">
           <ul>
-            <li>
-              <a href="#!">♥1</a>
+            <li onClick={() => {setBtn_navBar(false)}}>
+              <a className="redirection" href="#iCarousel">Carousel</a>
             </li>
-            <li>
-              <a href="#!">♥2</a>
+            <li onClick={() => {setBtn_navBar(false)}}>
+              <a className="redirection" href="#iContent">Contents</a>
             </li>
-            <li>
-              <a href="#!">♥3</a>
+            <li onClick={() => {setBtn_navBar(false)}}>
+              <a className="redirection" href="#iQuestions">Questions</a>
             </li>
-            <li>
-              <a href="#!">♥4</a>
+            <li onClick={() => {setBtn_navBar(false)}}>
+              <a className="redirection" href="#iAboutUs">About Us</a>
             </li>
           </ul>
         </nav>

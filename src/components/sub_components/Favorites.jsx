@@ -10,9 +10,9 @@ const Favorites = () => {
 
   const rSection = useRef(null);
 
-  const {
-    state: { cards: stateCards },
-  } = useContext(AllContext);
+  // const {
+  //   state: { s_modal },
+  // } = useContext(AllContext);
 
   const handleClick = (event, ref) => {
     // console.log("click", event, "=========", ref);
@@ -69,6 +69,7 @@ const Favorites = () => {
             isFavorite={item.isFavorite}
             mFunctionOpen={handleClick}
             mDeleteFavs={mRemoveFavorite}
+            detail={true}
           />
         );
       })}

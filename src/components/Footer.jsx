@@ -5,7 +5,7 @@ import { api_otherWebSites } from "../assets/data/apiWebSites";
 
 const Footer = () => {
   return (
-    <footer className="component-footer">
+    <footer id="iAboutUs" className="component-footer">
       <section className="footer--firstSection">
         <section className="firstSection-box--one">
           <img

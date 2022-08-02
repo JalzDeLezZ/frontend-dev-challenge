@@ -14,7 +14,7 @@ const MY_BTN_DOWN = () => {
 };
 
 const MY_BTN_SEND = () => (
-  <button className={styles["cmp_send--btn"]} type='submit'>
+  <button className={styles["cmp_send--btn"]} type="submit">
     <div className={styles["svg-wrapper-1"]}>
       <div className={styles["svg-wrapper"]}>
         <svg
@@ -35,4 +35,10 @@ const MY_BTN_SEND = () => (
     <span>Send</span>
   </button>
 );
-export { MY_BTN_DOWN, MY_BTN_SEND };
+
+const MY_BTN_MAN = (props) => (
+  <button id={props.id} className={styles["cmp-details--btn"]} onClick={props.onClick}>
+    <span>DETAILS</span>
+  </button>
+);
+export { MY_BTN_DOWN, MY_BTN_SEND, MY_BTN_MAN };
