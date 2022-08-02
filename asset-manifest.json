@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/frontend-dev-challenge/static/css/main.8648b2ae.css",
-    "main.js": "/frontend-dev-challenge/static/js/main.2e1f7ebb.js",
+    "main.js": "/frontend-dev-challenge/static/js/main.fc1c4ed9.js",
     "static/media/c_sleep.svg": "/frontend-dev-challenge/static/media/c_sleep.86653a9d052c8513526b10368664f808.svg",
+    "static/media/familyy.jpg": "/frontend-dev-challenge/static/media/familyy.5a8faaa0c693ec097d95.jpg",
     "static/media/c_playing.svg": "/frontend-dev-challenge/static/media/c_playing.eb1aa55122733d52b7c6f1ba8d8351b0.svg",
     "static/media/oceann.jpg": "/frontend-dev-challenge/static/media/oceann.e1b97995f5027fddea28.jpg",
     "static/media/family.jpg": "/frontend-dev-challenge/static/media/family.cfd1f2bc06b1db4b3045.jpg",
@@ -41,10 +42,10 @@
     "static/media/subtract-fav.svg": "/frontend-dev-challenge/static/media/subtract-fav.69c25f2e85e7d74634889e069b4d9246.svg",
     "static/media/facebook.svg": "/frontend-dev-challenge/static/media/facebook.5feb2a59251aa0f9dd623f9c4747468e.svg",
     "main.8648b2ae.css.map": "/frontend-dev-challenge/static/css/main.8648b2ae.css.map",
-    "main.2e1f7ebb.js.map": "/frontend-dev-challenge/static/js/main.2e1f7ebb.js.map"
+    "main.fc1c4ed9.js.map": "/frontend-dev-challenge/static/js/main.fc1c4ed9.js.map"
   },
   "entrypoints": [
     "static/css/main.8648b2ae.css",
-    "static/js/main.2e1f7ebb.js"
+    "static/js/main.fc1c4ed9.js"
   ]
 }
